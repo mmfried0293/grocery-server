@@ -5,6 +5,7 @@ async function createItem(item) {
     return knex('items').insert(item);
 };
 
+
 async function getAll(){
     return knex.from('items').select('*');
 };

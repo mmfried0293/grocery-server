@@ -20,15 +20,15 @@ app.post('/items/create', async (req, res, next)=> {
         let item = req.body;
      await itemController.createItem(item);
     // res.redirect('http://localhost:3000')
-    
 
-    
 });
+
 
 app.get('/items/json', async (req, res, next)=> {
     let data = await itemController.getAll();
-    res.json(date);
+    res.json(data);
 })
+
 
 
 app.listen(CONFIG.PORT, ()=> {

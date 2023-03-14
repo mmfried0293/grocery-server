@@ -25,6 +25,10 @@ app.post('/items/create', async (req, res, next)=> {
     
 });
 
+app.get('/items/json', async (req, res, next)=> {
+    let data = await itemController.getAll();
+    res.json(date);
+})
 
 
 app.listen(CONFIG.PORT, ()=> {

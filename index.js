@@ -44,6 +44,10 @@ app.post('/order/create',  async (req, res, next)=> {
                 console.log(e)
                 }});        
 
+app.get('/order/json', async (req, res, next)=> {
+                    let data = await orderController.getAll();
+                    res.json(data);
+                })  ;              
 
 app.get('/items/json', async (req, res, next)=> {
     let data = await itemController.getAll();

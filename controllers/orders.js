@@ -5,4 +5,9 @@ async function createOrder(order) {
 };
 
 
-module.exports = {createOrder};
+
+async function getAll(order){
+    return knex.from('orderLineItems').select('*')
+}
+
+module.exports = {createOrder, getAll};
